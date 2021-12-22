@@ -75,10 +75,9 @@ public class Donate extends Base {
     @Override
     public void reset(MenuItem item)
     {
-        // Your implementation goes here
+        app.dbManager.reset();
         app.totalDonated = 0;
-        String totalDonatedStr = "$" + app.totalDonated;
-        amountTotal.setText(totalDonatedStr);
+        amountTotal.setText("$" + app.totalDonated);
     }
 
 }
